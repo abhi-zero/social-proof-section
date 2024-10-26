@@ -1,0 +1,353 @@
+@font-face {
+    font-display: swap;
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts-3by.pages.dev/league-spartan-v11-latin/league-spartan-v11-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 500;
+    src: url('https://fonts-3by.pages.dev/league-spartan-v11-latin/league-spartan-v11-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts-3by.pages.dev/league-spartan-v11-latin/league-spartan-v11-latin-700.woff2') format('woff2');
+}
+
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+    /* ### Neutral */
+
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+    --stars-color: goldenrod;
+
+    /* ## Fonts   */
+
+    /* ## Font Family  */
+
+    --ff: 'League Spartan', Sans-serif;
+
+    /* ## Font Sizes  */
+
+    --fs-400: 2.5rem;     /*  36px */
+    --fs-300: 2rem;   /*  32px */
+    --fs-200: 1rem;   /*  16px */
+    --fs-100: 0.9375rem;   /*  15px */
+
+    /* ## spaceing  */
+    --mar-pad-gap-1000: 6.25rem;   /* 100px */
+    --mar-pad-gap-900: 5.625rem;   /* 90px */
+    --mar-pad-gap-800: 5rem;       /* 80px */
+    --mar-pad-gap-700: 4.375rem;   /* 70px */
+    --mar-pad-gap-600: 3.75rem;    /* 60px */
+    --mar-pad-gap-500: 3.125rem;   /* 50px */
+    --mar-pad-gap-400: 2.5rem;     /* 40px */
+    --mar-pad-gap-300: 1.875rem;   /* 30px */
+    --mar-pad-gap-200: 1.25rem;    /*  20px */
+    --mar-pad-gap-100: 0.625rem;   /*  10px */
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: var(--ff);
+    font-size: var(--fs-200);
+    padding-block: var(--mar-pad-gap-800);
+    padding-inline: auto;
+}
+
+.wrapper {
+    width: clamp(21rem, 100%, 25rem);
+    /* margin: 80px 20px; */
+    padding-inline: var(--mar-pad-gap-200);
+    display: grid;
+    gap: var(--mar-pad-gap-400);
+    grid-template-rows: repeat(3, auto);
+}
+
+.tagline-section {
+
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: var(--mar-pad-gap-100);
+}
+
+.tagline-section .tagline-title {
+    width: 70%;
+    margin: auto;
+    font-size: var(--fs-400);
+    font-weight: 700;
+    color: var(--Dark-Magenta);
+    line-height: 0.8;
+    letter-spacing: -2px;
+}
+
+.tagline-section .tagline-description {
+    width: 95%;
+    place-self: center;
+    color: var(--Dark-Grayish-Magenta);
+}
+
+.rated-section {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: var(--mar-pad-gap-100);
+}
+
+.rated-section .rated-msg {
+    --padding:0.4375rem;  /*7px*/
+    --br:0.4375rem;
+
+    background-color: var(--Light-Grayish-Magenta);
+    font-size: var(--fs-100);
+    font-weight: 700;
+    color: var(--Dark-Magenta);
+    padding-block: var(--padding);
+    border-radius: var(--br);
+
+}
+
+.rated-msg .stars {
+    color: var(--stars-color);
+    letter-spacing: 2px;
+}
+
+
+.review-section {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: var(--mar-pad-gap-100);
+    color: var(--White);
+    font-size: var(--fs-100);
+    text-align: start;
+}
+
+.review-section .review-card {
+    --br:0.625rem;
+
+    background-color: var(--Dark-Magenta);
+    padding-block: var(--mar-pad-gap-300);
+    padding-inline: var(--mar-pad-gap-300);
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: var(--mar-pad-gap-200);
+    border-radius: var(--br);
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    gap: var(--mar-pad-gap-100);
+    align-items: center;
+}
+
+.header img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.header .user-details {
+    padding-block: 0.3125rem;
+}
+
+.header .user-name {
+    font-weight: 700;
+    letter-spacing: 0.9px;
+}
+
+.header .user-category {
+    color: var(--Soft-Pink);
+}
+
+.user-comment {
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+
+@media (min-width:56rem){
+
+    .wrapper {
+        width:71rem;
+        /* margin: 80px 20px; */
+        padding-inline: var(--mar-pad-gap-600);
+        display: grid;
+        gap: var(--mar-pad-gap-700);
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+.tagline-section {
+    width:25rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: var(--mar-pad-gap-100);
+    text-align: start;
+}
+
+.tagline-section .tagline-title {
+    --fs-small:3.125rem;
+    --fs-large:4.375rem;
+
+    margin: 0;
+    font-size: clamp(--fs-small, 4vw, --fs-large);
+}
+
+.tagline-section .tagline-description {
+    /* width: 80%; */
+    place-self: start;
+    color: var(--Dark-Grayish-Magenta);
+    font-size: clamp(1rem, 100%, 1.25rem);
+}
+
+
+
+.rated-section {
+    width: 100%;
+    margin-block: var(--mar-pad-gap-800);
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: var(--mar-pad-gap-100);
+    place-items: center;
+}
+
+.rated-section .rated-msg {
+    --padding:0.938rem; /*15px*/
+
+    width: 21.875rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-block: var(--padding);
+}
+
+.rated-msg[data-traslate-x="left"]{
+    transform: translateX(-40px);
+}
+.rated-msg[data-traslate-x="right"]{
+    transform: translateX(40px);
+}
+
+
+
+
+.review-section {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column: 1/ -1;
+    gap: var(--mar-pad-gap-100);
+    place-items: center;
+    color: var(--White);
+    font-size: var(--fs-100);
+    text-align: start;
+    margin:0 auto;
+    position: relative;
+}
+
+.review-section .review-card {
+    --br:0.625rem;
+    
+    width: clamp(14.375, 100%, 37.5rem );
+    height: 15.625rem;
+}
+
+.review-card[data-traslate-y="middle"]{
+    transform: translateY(20px);
+}
+.review-card[data-traslate-y="bottom"]{
+    transform: translateY(40px);
+}
+
+}
+
