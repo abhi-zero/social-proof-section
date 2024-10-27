@@ -277,18 +277,17 @@ body {
 }
 
 .tagline-section .tagline-title {
-    --fs-small:3.125rem;
-    --fs-large:4.375rem;
 
-    margin: 0;
-    font-size: clamp(--fs-small, 4vw, --fs-large);
+    width: 100%;
+    margin-top: 2.25rem;
+    font-size: 4rem;
 }
 
 .tagline-section .tagline-description {
     /* width: 80%; */
     place-self: start;
     color: var(--Dark-Grayish-Magenta);
-    font-size: clamp(1rem, 100%, 1.25rem);
+    font-size: 1.25rem;
 }
 
 
