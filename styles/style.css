@@ -309,6 +309,8 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     padding-block: var(--padding);
+    cursor: pointer;
+    transition: transform  .4s ease-in;
 }
 
 .rated-msg[data-traslate-x="left"]{
@@ -318,6 +320,9 @@ body {
     transform: translateX(40px);
 }
 
+.rated-msg:hover{
+  transform: scaleX(1.1);
+}
 
 
 
@@ -339,6 +344,8 @@ body {
     
     width: clamp(14.375, 100%, 37.5rem );
     height: 15.625rem;
+    cursor: pointer;
+    transition: transform  .4s ease-in;
 }
 
 .review-card[data-traslate-y="middle"]{
@@ -346,6 +353,10 @@ body {
 }
 .review-card[data-traslate-y="bottom"]{
     transform: translateY(40px);
+}
+
+.review-card:hover{
+    transform: rotateZ(5deg);
 }
 
 }
